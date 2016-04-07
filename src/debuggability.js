@@ -305,15 +305,7 @@ function longStackTracesAttachExtraTrace(error, ignoreSelf) {
 
 function checkForgottenReturns(returnValue, promiseCreated, name, promise,
                                parent) {
-    if (returnValue === undefined && promiseCreated !== null &&
-        wForgottenReturn) {
-        if (parent !== undefined && parent._returnedNonUndefined()) return;
-
-        if (name) name = name + " ";
-        var msg = "a promise was created in a " + name +
-            "handler but was not returned from it";
-        promise._warn(msg, true, promiseCreated);
-    }
+    return;
 }
 
 function deprecated(name, replacement) {
