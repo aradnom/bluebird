@@ -17,7 +17,7 @@ var printWarning;
 var debugging = !!(util.env("BLUEBIRD_DEBUG") != 0 &&
                         (__DEBUG__ ||
                          util.env("BLUEBIRD_DEBUG") ||
-                         util.env("NODE_ENV") === "development"));
+                         util.env("NODE_ENV") === "debug"));
 
 var warnings = !!(util.env("BLUEBIRD_WARNINGS") != 0 &&
     (debugging || util.env("BLUEBIRD_WARNINGS")));
