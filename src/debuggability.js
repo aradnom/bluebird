@@ -27,8 +27,7 @@ var warnings = !!(util.env("BLUEBIRD_WARNINGS") != 0 &&
 var longStackTraces = !!(util.env("BLUEBIRD_LONG_STACK_TRACES") != 0 &&
     (debugging || util.env("BLUEBIRD_LONG_STACK_TRACES")));
 
-var wForgottenReturn = util.env("BLUEBIRD_W_FORGOTTEN_RETURN") != 0 &&
-    (warnings || !!util.env("BLUEBIRD_W_FORGOTTEN_RETURN"));
+var wForgottenReturn = false;
 
 Promise.prototype.suppressUnhandledRejections = function() {
     var target = this._target();
